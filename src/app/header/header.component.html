@@ -14,11 +14,15 @@
 			<li class="nav-link" *ngIf="isAuth()">
 				<a class="nav-link" routerLink="/proveedores">Proveedores</a></li>
 			<li class="nav-link" *ngIf="isAuth()">
-				<a class="nav-link" routerLink="/addpres">Agregar Presupuesto</a></li>
+				<a class="nav-link" routerLink="/addprovee">Agregar Proveedor</a></li>
 			<li class="nav-link" *ngIf="isAuth()">
 				<a class="nav-link" routerLink="/presupuestos">Presupuestos</a></li>
 			<li class="nav-link" *ngIf="isAuth()">
-				<a class="nav-link" routerLink="/registro">Registro </a></li>
+				<a class="nav-link" routerLink="/addpres">Agregar Presupuesto</a></li>
+			<li class="nav-link" *ngIf="isAuth()">
+				<a class="nav-link" routerLink="/registro">Registro</a></li>
+			<li class="nav-link" *ngIf="isAuth()">
+				<a class="nav-link" routerLink="/facturas">Facturas</a></li>
 			<li class="nav-link" *ngIf="!isAuth()">
 				<button class="btn btn-primary float-md-right"
 					routerLink="/iniciosesion">Acceso App</button>

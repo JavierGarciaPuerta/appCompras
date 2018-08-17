@@ -28,7 +28,7 @@ export class ProveedoresService {
     }
   ];
 
-  getProveedores(){  
+  getProveedores(){ 
     return this.proveedores;
   }
 

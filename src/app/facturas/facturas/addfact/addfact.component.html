@@ -1,0 +1,43 @@
+<div class="row">
+	<div
+		class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">
+		<h2>Agregar nueva factura</h2>
+		<form [formGroup]="facturaForm" (ngSubmit)="onSubmit()">
+			<div class="form-group">
+				<label for="nombre">Nombre</label> <input type="text"
+					class="form-control" id="nombre" formControlName="nombre">
+			</div>
+			<div class="form-group">
+				<label for="precio">Precio</label> <input type="number"
+					class="form-control" id="precio" formControlName="precio">
+			</div>
+			<div class="form-group">
+				<label for="iva">Tipo de IVA</label> <select class="form-control"
+					id="iva" formControlName="iva">
+					<option value="">Seleccione...</option>
+					<option value=0>0 %</option>
+					<option value=0.04>4 %</option>
+					<option value=0.10>10 %</option>
+					<option value=0.21>21 %</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="proveedor">Proveedor</label> <select class="form-control" id="proveedor"
+					formControlName="proveedor">
+					<option value="">Seleccione...</option>
+					<option *ngFor="let proveedor of proveedores"
+						value="{{proveedor.nombre }}">{{ proveedor.nombre }}</option>
+				</select>
+				<p class="alert alert-danger" *ngIf="facturaForm.controls.proveedor.invalid && facturaForm.controls.proveedor.touched">
+					El campo Proveedor es obligatorio.</p>
+			</div>
+			<button class="btn btn-primary" type="submit">Agregar Factura</button>
+			<a class="btn btn-danger" routerLink="/facturas">Cancelar</a>
+		</form>
+		<hr>
+		<pre>Valor del formulario: {{ facturaForm.value | json }}</pre>
+		<pre>Status del formulario: {{ facturaForm.status | json }}</pre>
+		<hr>
+		<pre>{{ factura | json }}</pre>
+	</div>
+</div>

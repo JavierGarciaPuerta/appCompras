@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PresupuestosService } from '../../servicios/presupuestos.service';
+import { ProveedoresService } from '../../servicios/proveedores.service';
 
 @Component({
   selector: 'app-addpres',
@@ -10,7 +11,12 @@ import { PresupuestosService } from '../../servicios/presupuestos.service';
 export class AddpresComponent implements OnInit {
   presupuestoForm: FormGroup;
   presupuesto: any;
-  constructor(private pf: FormBuilder, private presupuestoService: PresupuestosService) { }
+  proveedores: any[] = [];
+  constructor(private pf: FormBuilder,
+              private presupuestoService: PresupuestosService,
+              private proveedoresService: ProveedoresService) {
+    this.proveedores = proveedoresService.getProveedores();
+  }
 
   savePresupuesto() {
     const savePresupuesto = {
