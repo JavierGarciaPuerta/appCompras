@@ -5,7 +5,9 @@ import { Headers, Http } from '@angular/http';
 export class FacturasService {
   factsURL = 'https://comprasapp-90e07.firebaseio.com/facturas.json'; // para guardar facturas en la database
   factURL = 'https://comprasapp-90e07.firebaseio.com/facturas/';
-  appComprasCore = 'http://localhost:8080/add-facturas';
+  appComprasCore = 'http://localhost:8080/bill/add';
+  appComprasCoreList = 'http://localhost:8080/bill/list';
+  appComprasCoreDelete = 'http://localhost:8080/bill/delete';
 
   facturas: any = [
     {
@@ -43,7 +45,12 @@ export class FacturasService {
   }
 
   getFacturas() {
-    return this.http.get(this.factsURL)
+    return this.http.get(this.appComprasCoreList)
+      .map(res => res.json());
+  }
+
+  delteFactura(Factura: any){
+    return this.http.delete(this.appComprasCoreDelete, Factura)
       .map(res => res.json());
   }
 

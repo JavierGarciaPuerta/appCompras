@@ -25,8 +25,8 @@ export class FacturasComponent implements OnInit {
     // this.facturas = this.facturasService.getFacturas(); // se utiliza this.facturasService ya que se ha declarado en el constructor
   }
 
-  deleteFactura(facturas: any) {
-    console.log("llega a la funci�n de eliminar factura");
+  deleteFactura(Factura: any) {
+    this.facturasService.delteFactura(Factura).subscribe();
   }
 
 }
