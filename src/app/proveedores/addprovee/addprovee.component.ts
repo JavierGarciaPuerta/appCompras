@@ -12,16 +12,16 @@ export class AddproveeComponent implements OnInit {
   @ViewChild('formpro') formpro: NgForm;
   proveedor: any;
   provincias: string[] = [
-'Álava','Albacete','Alicante','Almería','Asturias','Ávila','Badajoz','Barcelona',
-'Burgos', 'Cáceres', 'Cádiz','Cantabria','Castellón','Ciudad Real','Córdoba',
-'La Coruña','Cuenca','Gerona','Granada','Guadalajara',
-'Guipúzcoa','Huelva','Huesca','IslasBaleares','Jaén','León','Lérida','Lugo',
-'Madrid', 'Málaga','Murcia','Navarra','Orense','Palencia','Las Palmas',
+'ï¿½lava','Albacete','Alicante','Almerï¿½a','Asturias','ï¿½vila','Badajoz','Barcelona',
+'Burgos', 'Cï¿½ceres', 'Cï¿½diz','Cantabria','Castellï¿½n','Ciudad Real','Cï¿½rdoba',
+'La Coruï¿½a','Cuenca','Gerona','Granada','Guadalajara',
+'Guipï¿½zcoa','Huelva','Huesca','IslasBaleares','Jaï¿½n','Leï¿½n','Lï¿½rida','Lugo',
+'Madrid', 'Mï¿½laga','Murcia','Navarra','Orense','Palencia','Las Palmas',
 'Pontevedra','La Rioja','Salamanca','Segovia','Sevilla','Soria','Tarragona',
 'Santa Cruz de Tenerife', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Vizcaya',
 'Zamora','Zaragoza' ];
 
-  constructor(private presupuestoService: PresupuestosService) { // Se añade el servicio al constructor.
+  constructor(private presupuestoService: PresupuestosService) { // Se aï¿½ade el servicio al constructor.
     /*this.proveedor = {
       nombre: '',
       cif: '',

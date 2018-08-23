@@ -18,7 +18,7 @@
 			<td>{{ factura.precio }}</td>
 			<td>{{ factura.iva }}</td>
 			<td>{{ factura.proveedor }}</td>
-			<td><button type="button" class="btn btn-danger" (click)="deleteFactura(factura)">Eliminar</button></td>
+			<td><button type="button" class="btn btn-danger" (click)="deleteFactura(factura.id)">Eliminar</button></td>
 		</tr>
 	</tbody>
 </table>

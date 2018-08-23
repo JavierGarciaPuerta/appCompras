@@ -42,7 +42,6 @@ export class AddfactComponent implements OnInit {
     this.facturaResp = this.facturaService.postFactura(this.factura)
       .subscribe(newfact => {
      });
-    console.log('facturaResp=>' + this.facturaResp);
     this.facturaForm.reset();
   }
 
